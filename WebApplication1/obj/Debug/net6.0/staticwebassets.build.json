@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ErZ2PNS6tFHxC2lkuOx3rgatbaruNEvVUaGGwWSXJCQ=",
+  "Source": "ParcelTrackerWebAPI",
+  "BasePath": "_content/ParcelTrackerWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
