@@ -1,30 +1,31 @@
 # ParcelTracker-WebAPI
 
-WebAPI частина проєкту
+WebAPI частина проєкту *ParcelTracker*
 
 ## Основні HTTP методи:
 
-<p><span style="background-color: lightblue;">GET</span> /QuotaInfo/GetModel</p>
-<p>**Отримує:** -<br>
-**Віддає:** QuotaInfoModel<br>
-**Опис:** віддає модель, що містить дані про квоту сервісу 17Track (квота - обмеження по реєстрації відправлень в системі)</p>
+*__GET__* `/QuotaInfo/GetModel`  
+*Отримує:* -  
+*Віддає:* QuotaInfoModel  
+*Опис:* віддає модель, що містить дані про квоту сервісу 17Track (квота - обмеження по реєстрації відправлень в системі)
 
-<p><span style="background-color: lightblue;">GET</span> /TrackingDetails</p>
-<p>**Отримує:** ParcelCode (string)<br>
-**Віддає:** TrackingDetailsModel<br>
-**Опис:** повертає модель з усіма доступними даними щодо відслідковування відправлення для конкретного номера відправлення</p>
+*__GET__* `/TrackingDetails`  
+*Отримує:* ParcelCode (string)  
+*Віддає:* TrackingDetailsModel  
+*Опис:* повертає модель з усіма доступними даними щодо відслідковування відправлення для конкретного номера відправлення
 
-<p><span style="background-color: lightblue;">GET</span> /MyParcelsList</p>
-<p>**Отримує:** user_id (int32)<br>
-**Віддає:** List &lt;DatabaseModel&gt;<br>
-**Опис:** віддає список моделей збережених відправлень для конкретного користувача</p>
+*__GET__* `/MyParcelsList`  
+*Отримує:* user_id (int32)  
+*Віддає:* List <DatabaseModel>  
+*Опис:* віддає список моделей збережених відправлень для конкретного користувача
 
-<p><span style="background-color: lightgreen;">POST</span> /ParcelRegister</p>
-<p>**Отримує:** user_id (int32), parcel_code (string), parcel_tag (string), parcel_description (string)<br>
-**Віддає:** int32 (200 або код помилки)<br>
-**Опис:** реєструє відправлення в реєстрі 17Track, якщо успішно то додає до БД та віддає код 200 (якщо помилка - код помилки)</p>
+*__POST__* `/ParcelRegister`  
+*Отримує:* user_id (int32), parcel_code (string), parcel_tag (string), parcel_description (string)  
+*Віддає:* int32 (200 або код помилки)  
+*Опис:* реєструє відправлення в реєстрі 17Track, якщо успішно то додає до БД та віддає код 200 (якщо помилка - код помилки)
 
-<p><span style="background-color: lightcoral;">DELETE</span> /ParcelDelete</p>
-<p>**Отримує:** parcel_code (string)<br>
-**Віддає:** int32 (200 або код помилки)<br>
-**Опис:** видаляє відправлення з реєстру 17Track, якщо успішно то видаляє з БД та віддає код 200 (якщо помилка - код помилки)</p>
+*__DELETE__* `/ParcelDelete`  
+*Отримує:* parcel_code (string)  
+*Віддає:* int32 (200 або код помилки)  
+*Опис:* видаляє відправлення з реєстру 17Track, якщо успішно то видаляє з БД та віддає код 200 (якщо помилка - код помилки)
+
